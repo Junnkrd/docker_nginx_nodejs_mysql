@@ -1,4 +1,4 @@
-Projeto prático docker: Utilizando Nginx com Node.js e MySQL
+Projeto prático docker: Utilizando Nginx com Node.js e MySQL.
 
 Sobre o desafio:
 
