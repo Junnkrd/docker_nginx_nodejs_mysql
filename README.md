@@ -50,6 +50,6 @@ docker-compose up -d
 - Docker
 - Docker Compose
 
-![DockerCompose](print/dockercompose.png)
-![insertManual](print/insertmanual.png)
-![LocalHost](print/pagelocalhost.png)
+![DockerCompose](prints/dockercompose.png)
+![insertManual](prints/insertmanual.png)
+![LocalHost](prints/pagelocalhost.png)
