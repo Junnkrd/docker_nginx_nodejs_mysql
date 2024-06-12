@@ -41,7 +41,7 @@ docker-compose up -d
 
 \*\*Por default a construção do container já vai inserir caso nao tenha 2 nomes para mostrar no site.
 
-- Caso queira inserir mais nomes utilizar a tabela people
+- Caso queira inserir mais nomes utilizar a tabela people.
 
 ## Tecnologias Utilizadas
 
