@@ -3,10 +3,8 @@ version: '3.8'
 services:
   db:
     image: mysql:5.7
-    command: --innodb-use-native-aio=0
     container_name: db
     restart: always
-    tty: true
     volumes:
       - mysql-data:/var/lib/mysql
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -16,7 +14,7 @@ services:
     networks:
       - node-network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "--password=root"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -24,7 +22,6 @@ services:
 
   node-app:
     build: ./node-app
-    image: junnkrd/node-app:latest
     container_name: node-app
     restart: always
     depends_on:
@@ -42,7 +39,6 @@ services:
 
   nginx:
     build: ./nginx
-    image: junnkrd/nginx:latest
     container_name: nginx
     restart: always
     ports:
@@ -55,7 +51,8 @@ services:
 networks:
   node-network:
     driver: bridge
-    
+
 volumes:
   mysql-data:
     driver: local
+

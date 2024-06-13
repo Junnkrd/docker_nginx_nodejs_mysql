@@ -54,3 +54,7 @@ docker-compose up -d
 ![DockerCompose](prints/dockercompose.png)
 ![insertManual](prints/insertmanual.png)
 ![LocalHost](prints/pagelocalhost.png)
+![PersistenciaDosDados](prints/persistencia_dados_db.png)
+
+Correcao tabela nao encontrada init.sql em gitignore:
+![Correcao](prints/fix_db_not_found.png)
