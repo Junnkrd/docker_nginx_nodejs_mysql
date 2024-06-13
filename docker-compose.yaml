@@ -3,8 +3,10 @@ version: '3.8'
 services:
   db:
     image: mysql:5.7
+    command: --innodb-use-native-aio=0
     container_name: db
     restart: always
+    tty: true
     volumes:
       - mysql-data:/var/lib/mysql
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -22,6 +24,7 @@ services:
 
   node-app:
     build: ./node-app
+    image: junnkrd/node-app:latest
     container_name: node-app
     restart: always
     depends_on:
